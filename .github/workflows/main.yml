@@ -41,7 +41,7 @@ jobs:
           brew install make xz ldid 
           export THEOS=theos
           gmake clean package FINALPACKAGE=1
-          Version=$(grep '^Version' Version | cut -d' ' -f2)
+          Version=$(grep '^Version' control | cut -d' ' -f2)
           echo "Version=$Version" >> $GITHUB_OUTPUT
           echo "==> Built v$Version Successfully."
 
